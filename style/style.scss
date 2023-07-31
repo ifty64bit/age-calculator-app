@@ -30,7 +30,7 @@ body {
     padding: 2rem;
     margin: 2rem 0;
     @include mobile {
-        width: 96%;
+        width: 95%;
         padding: 1rem;
     }
     //Target input inside card
@@ -42,7 +42,8 @@ body {
         font-size: 150%;
         font-weight: 700;
         @include mobile {
-            max-width: 6.1rem;
+            max-width: 5.4rem;
+            font-size: 120%;
         }
     }
 
