@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div class="card" x-data="calculator">
+            <div id="input__div" class="input__div">
+                <div class="input__wrapper">
+                    <label for="day">Day</label>
+                    <input
+                        name="day"
+                        type="number"
+                        placeholder="DD"
+                        x-model="day"
+                        x-on:blur="validateDay"
+                        x-on:input="validateDay"
+                    />
+                    <label class="error__label" x-show="isDayError" x-text="dayErrorMessage"></label>
+                </div>
+                <div class="input__wrapper">
+                    <label for="month">Month</label>
+                    <input
+                        name="month"
+                        type="number"
+                        placeholder="MM"
+                        x-model="month"
+                        x-on:blur="validateMonth"
+                        x-on:input="validateMonth"
+                    />
+                    <label class="error__label" x-show="isMonthError" x-text="monthErrorMessage">
+                    </label>
+                </div>
+                <div class="input__wrapper">
+                    <label for="year">Year</label>
+                    <input
+                        name="year"
+                        type="number"
+                        placeholder="YYYY"
+                        x-model="year"
+                        x-on:blur="validateYear"
+                        x-on:input="validateYear"
+                    />
+                    <label class="error__label" x-show="isYearError" x-text="yearErrorMessage">
+                    </label>
+                </div>
+            </div>
+            <div id="devider" class="devider">
+                <img src="/assets/images/icon-arrow.svg" alt="calculate button" @click="getResult" />
+            </div>
+            <div id="display" class="display">
+                <h3><span x-text="result[2] !== undefined ? result[2] : '--'">--</span>years</h3>
+                <h3><span x-text="result[1] !== undefined ? result[1] : '--'">--</span>months</h3>
+                <h3><span x-text="result[0] !== undefined ? result[0] : '--'">--</span>days</h3>
+            </div>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>

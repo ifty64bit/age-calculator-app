@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 80px;
+    scroll-padding-bottom: 80px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
